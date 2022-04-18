@@ -11,7 +11,7 @@ export default function TodoBodyItem({item}) {
   return (
       <li className={li}>
         <TodoBodyItemCheckbox name={name} id={id}/>
-        <TodoBodyItemActions/>
+        <TodoBodyItemActions id={id}/>
         </li>
   )
 }

@@ -12,7 +12,7 @@ export default function TodoBody() {
   return (
     <div className={container}>
     <ul className={ul}>
-  {todoData.map(item => (
+   {todoData.map(item => (
     <TodoBodyItem key={item.id} item={item}/>
   ))}
  </ul>

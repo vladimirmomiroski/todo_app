@@ -10,16 +10,22 @@ export const Provider = ({children}) => {
         setTodoData(TodoArr)
     }, [])
 
-    const addTodo = () => {
-
+    const addTodo = (item) => {
+      setTodoData([...todoData, item])
     }
 
-    const deleteTodo = () => {
-
+    const deleteTodo = (id) => {
+       let confirming = window.confirm("Are you sure you want to delete this todo?")
+       if(confirming) {
+         const filteredArr = todoData.filter(el => el.id !== id)
+         setTodoData(filteredArr)
+       }
     }
 
     const contextObj = {
       todoData,
+      addTodo,
+      deleteTodo
     }
 
 
