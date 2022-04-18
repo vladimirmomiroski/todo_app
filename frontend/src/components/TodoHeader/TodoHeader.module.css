@@ -1,0 +1,30 @@
+.container {
+    width:40%;
+    background-color: #00203F;
+    padding:1.5rem;
+    display:flex;
+    justify-content: space-between;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.input {
+    border: 3px solid #ADEFD1;
+    border-radius: 0.2rem;
+    padding: 0.6rem 1rem 0.6rem 0.4rem;
+}
+
+.btn {
+    border: 3px solid #ADEFD1;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: #00203F;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color:#FFD700;
+    transition:.3s ease-in-out;
+}
