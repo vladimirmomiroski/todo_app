@@ -1,0 +1,9 @@
+.deleteBtn {
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    background-color: #d93425;
+    color: #fff;
+    font-weight:bold;
+}

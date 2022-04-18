@@ -1,0 +1,13 @@
+.container {
+    display:flex;
+    align-items: center;
+}
+
+.nameText {
+    margin-left:0.6rem;
+}
+
+.checkmark {
+    height: 18px;
+    width: 18px;
+}
