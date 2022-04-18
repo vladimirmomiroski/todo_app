@@ -7,10 +7,10 @@ export default function TodoBodyItem({item}) {
 
     const {li} = classes
 
-    const {id, name, isEnabled} = item
+    const {id} = item
   return (
       <li className={li}>
-        <TodoBodyItemCheckbox name={name} id={id}/>
+        <TodoBodyItemCheckbox item={item} />
         <TodoBodyItemActions id={id}/>
         </li>
   )

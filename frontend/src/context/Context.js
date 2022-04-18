@@ -4,11 +4,7 @@ export const Context = createContext();
 
 export const Provider = ({children}) => {
 
-    const [todoData, setTodoData] = useState([])
-
-    useEffect(() => {
-        setTodoData(TodoArr)
-    }, [])
+    const [todoData, setTodoData] = useState(TodoArr)
 
     const addTodo = (item) => {
       setTodoData([...todoData, item])
@@ -22,10 +18,22 @@ export const Provider = ({children}) => {
        }
     }
 
+    const checkTodoAsCompleted = (id) => {
+      const checkTodo = todoData.map(el => {
+        if(el.id === id) {
+          el.isCompleted = !el.isCompleted
+          return el
+        }
+        return el
+      })
+      setTodoData(checkTodo)
+    }
+
     const contextObj = {
       todoData,
       addTodo,
-      deleteTodo
+      deleteTodo,
+      checkTodoAsCompleted
     }
 
 

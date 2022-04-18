@@ -11,3 +11,7 @@
     height: 18px;
     width: 18px;
 }
+
+.checked {
+    text-decoration: line-through;
+}
