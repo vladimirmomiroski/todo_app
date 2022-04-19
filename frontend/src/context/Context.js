@@ -1,41 +1,41 @@
-import React, {createContext, useState, useEffect} from 'react'
-import {TodoArr} from '../InitialTodos'
+import React, { createContext, useState, useEffect } from "react";
+import { TodoArr } from "../InitialTodos";
 export const Context = createContext();
 
-export const Provider = ({children}) => {
+export const Provider = ({ children }) => {
+  const [todoData, setTodoData] = useState(TodoArr);
 
-    const [todoData, setTodoData] = useState(TodoArr)
+  const addTodo = (item) => {
+    setTodoData([...todoData, item]);
+  };
 
-    const addTodo = (item) => {
-      setTodoData([...todoData, item])
+  const deleteTodo = (id) => {
+    let confirming = window.confirm(
+      "Are you sure you want to delete this todo?"
+    );
+    if (confirming) {
+      const filteredArr = todoData.filter((el) => el.id !== id);
+      setTodoData(filteredArr);
     }
+  };
 
-    const deleteTodo = (id) => {
-       let confirming = window.confirm("Are you sure you want to delete this todo?")
-       if(confirming) {
-         const filteredArr = todoData.filter(el => el.id !== id)
-         setTodoData(filteredArr)
-       }
-    }
+  const checkTodoAsCompleted = (id) => {
+    const checkTodo = todoData.map((el) => {
+      if (el.id === id) {
+        el.isCompleted = !el.isCompleted;
+        return el;
+      }
+      return el;
+    });
+    setTodoData(checkTodo);
+  };
 
-    const checkTodoAsCompleted = (id) => {
-      const checkTodo = todoData.map(el => {
-        if(el.id === id) {
-          el.isCompleted = !el.isCompleted
-          return el
-        }
-        return el
-      })
-      setTodoData(checkTodo)
-    }
+  const contextObj = {
+    todoData,
+    addTodo,
+    deleteTodo,
+    checkTodoAsCompleted,
+  };
 
-    const contextObj = {
-      todoData,
-      addTodo,
-      deleteTodo,
-      checkTodoAsCompleted
-    }
-
-
-return <Context.Provider value={contextObj}>{children}</Context.Provider>
-}
+  return <Context.Provider value={contextObj}>{children}</Context.Provider>;
+};
