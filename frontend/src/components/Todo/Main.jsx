@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./TodoMain.module.css";
-import TodoMainContainer from "./TodoMainContainer/TodoMainContainer";
+import classes from "./Main.module.css";
+import MainContainer from "./MainContainer/MainContainer";
 
 export default function TodoMain() {
   const { container } = classes;
   return (
     <div className={container}>
-      <TodoMainContainer />
+      <MainContainer />
     </div>
   );
 }

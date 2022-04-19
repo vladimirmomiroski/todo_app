@@ -1,7 +1,7 @@
 import React from 'react'
-import classes from './TodoMainContainer.module.css'
-import TodoHeader from '../TodoHeader/TodoHeader'
-import TodoBody from '../TodoBody/TodoBody';
+import classes from './MainContainer.module.css'
+import TodoHeader from '../Header/Header'
+import TodoBody from '../Body/Body';
 
 export default function TodoMainContainer() {
     const {title} = classes;

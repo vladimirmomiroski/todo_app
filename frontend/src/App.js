@@ -1,8 +1,9 @@
 import "./App.css";
 import React from "react";
-import TodoMain from "./components/TodoMain";
+import TodoMain from "./components/Todo/Main";
 
 function App() {
+
   return (
     <div className="App">
       <TodoMain />

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import classes from "./TodoBody.module.css";
-import { Context } from "../../context/Context";
-import TodoBodyItem from "./TodoBodyItem";
+import classes from "./Body.module.css";
+import {Context} from '../Context'
+import BodyItem from "./BodyItem";
 
-export default function TodoBody() {
+export default function Body() {
   const { container, ul } = classes;
 
   const { todoData } = useContext(Context);
@@ -12,7 +12,7 @@ export default function TodoBody() {
     <div className={container}>
       <ul className={ul}>
         {todoData.map((item) => (
-          <TodoBodyItem key={item.id} item={item} />
+          <BodyItem key={item.id} item={item} />
         ))}
       </ul>
     </div>

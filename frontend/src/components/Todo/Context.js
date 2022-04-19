@@ -1,9 +1,21 @@
 import React, { createContext, useState, useEffect } from "react";
-import { TodoArr } from "../InitialTodos";
+import { TodoArr } from "../../InitialTodos";
 export const Context = createContext();
 
 export const Provider = ({ children }) => {
+
   const [todoData, setTodoData] = useState(TodoArr);
+
+  useEffect(() => {
+         fetch("http://localhost:5000/todos")
+         .then(res => res.json())
+         .then(data => {
+           console.log(data)
+         }) 
+         .catch(error => {
+           console.log(error)
+         })
+  }, [])
 
   const addTodo = (item) => {
     setTodoData([...todoData, item]);
