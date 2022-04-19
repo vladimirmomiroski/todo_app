@@ -1,8 +1,65 @@
+const express = require('express');
+const { mongoose } = require('mongoose');
+const port = 5000;
 
-const express = require('express')
-const app = express()
-const port = 5000
+const app = express();
 
-app.get('/', (req, res) => res.send('Hello World from backend'))
+const todoArr = [
+    {
+      id: 1,
+      name: "Gym",
+      isCompleted: false,
+    },
+    {
+      id: 2,
+      name: "Running",
+      isCompleted: false,
+    },
+    {
+      id: 3,
+      name: "Dota :D",
+      isCompleted: false,
+    },
+  ];
+  
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+// routes
+app.get('/', (request, response) => {
+    respond.statusCode(200);
+})
+
+app.get('/todos', (request, response) => {
+    response.json(todoArr)
+})
+
+// working in progress
+
+// post
+// app.post('/todos', (request, response) => {
+//     {
+     
+//     }
+    
+// })
+
+// delete
+// app.delete('/todos/id', (request, response) => {
+//     {
+     
+//     }
+// })
+
+// Connect to db
+
+// mongoose.connect(process.env.DB_CONNECTION, () => {
+//     console.log('contected to db')
+// })
+
+
+
+// listening to the server
+app.listen(port)
+
+
+
