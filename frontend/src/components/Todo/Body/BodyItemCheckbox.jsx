@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./BodyItemCheckbox.module.css";
-import { Context } from '../Context'
+import { Context } from "../Context";
 
 export default function TodoBodyItemCheckbox({ item }) {
   const { container, nameText, checkmark, checked } = classes;

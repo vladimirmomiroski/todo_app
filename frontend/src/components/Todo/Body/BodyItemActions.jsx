@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./BodyItemActions.module.css";
-import { Context } from '../Context'
+import { Context } from "../Context";
 
 export default function TodoBodyItemActions({ id }) {
   const { deleteBtn } = classes;
