@@ -7,7 +7,7 @@ const port = 5000;
 const app = express();
 app.use(express.json())
 
-const todoArr = [
+let todoArr = [
   {
     id: 1,
     name: "Gym",
@@ -35,7 +35,7 @@ app.use(cors());
 
 // routes
 app.get("/", (request, response) => {
-  respond.statusCode(200);
+    response.send("main route")
 });
 
 app.get("/todos", (request, response) => {
@@ -46,7 +46,8 @@ app.get("/todos", (request, response) => {
 
 
 app.post("/todos", (request, response) => {
-         console.log("todo Added", request.body)
+         const todo = request.body
+         todoArr = [...todoArr, todo]
          response.json({
              status: 'success'
          })
@@ -54,8 +55,26 @@ app.post("/todos", (request, response) => {
 
 app.delete("/todos/:id", (request, response) => {
       const {id} = request.params
-      console.log(id)
+      todoArr = todoArr.filter(el => el.id !== +id)
+      response.json({
+        status: 'success'
+    })
 });
+
+app.patch("/todos/:id", (request, response) => {
+       const {id} = request.params
+       console.log(id + "patch")
+       todoArr = todoArr.map(el => {
+        if (el.id === +id) {
+          el.isCompleted = !el.isCompleted;
+          return el;
+        }
+        return el;
+      });
+      response.json({
+        status: 'success'
+    })
+})
 
 
 
