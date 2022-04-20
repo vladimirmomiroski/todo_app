@@ -16,6 +16,7 @@ export default function TodoBodyItemCheckbox({ item }) {
         onChange={() => checkTodoAsCompleted(id)}
         className={checkmark}
         type="checkbox"
+        checked={isCompleted}
       />
       <p className={`${nameText} ${checkCompleted}`}>{name}</p>
     </div>

@@ -7,23 +7,24 @@ export const Provider = ({ children }) => {
   
   const fetchTodos = "http://localhost:5000/todos"
 
+
   useEffect(() => {
-    fetch(fetchTodos)
-      .then((res) => res.json())
-      .then((data) => {
-        setTodoData(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+     fetchData()
   }, []);
 
-  const addTodo = (item) => {
-    setTodoData([...todoData, item]);
-    postTodoToServer(item)
-  };
+  const fetchData = () => {
+    fetch(fetchTodos)
+    .then((res) => res.json())
+    .then((data) => {
+      setTodoData(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+  
 
-  const postTodoToServer = (item) => {
+  const addTodo = (item) => {
     const options = {
       method: 'POST',
       headers: {
@@ -35,44 +36,36 @@ export const Provider = ({ children }) => {
     fetch(fetchTodos, options)
     .then(res => {
       if(res.status === 200) {
-        window.alert("Todo Succesfully added!")
+       fetchData()
       }
     })
   }
 
-  const deleteTodoFromServer = (id) => {
+  const deleteTodo = (id) => {
+    let confirming = window.confirm("Are you sure you want to delete this todo")
+    if(confirming) {
+   sendMethodToServer('DELETE', id)
+    }
+  }
+
+  const sendMethodToServer = (method, id) => {
     const options = {
-      method: 'DELETE',
+      method,
       headers: {
         'Content-Type': 'application/json'
       },
    } 
 
     fetch(`${fetchTodos}/${id}`, options)
-   
+    .then(res => {
+     if(res.status === 200) {
+       fetchData()
+     }
+    })
   }
 
- 
-  const deleteTodo = (id) => {
-    let confirming = window.confirm(
-      "Are you sure you want to delete this todo?"
-    );
-    if (confirming) {
-      const filteredArr = todoData.filter((el) => el.id !== id);
-      setTodoData(filteredArr);
-      deleteTodoFromServer(id)
-    }
-  };
-
   const checkTodoAsCompleted = (id) => {
-    const checkTodo = todoData.map((el) => {
-      if (el.id === id) {
-        el.isCompleted = !el.isCompleted;
-        return el;
-      }
-      return el;
-    });
-    setTodoData(checkTodo);
+      sendMethodToServer('PATCH', id)
   };
 
   const contextObj = {
