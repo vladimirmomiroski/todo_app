@@ -3,7 +3,9 @@ const { mongoose } = require("mongoose");
 const cors = require('cors')
 const port = 5000;
 
+
 const app = express();
+app.use(express.json())
 
 const todoArr = [
   {
@@ -18,7 +20,12 @@ const todoArr = [
   },
   {
     id: 3,
-    name: "Dota :D",
+    name: "Coding",
+    isCompleted: false,
+  },
+  {
+    id: 4,
+    name: "Dota",
     isCompleted: false,
   },
 ];
@@ -39,20 +46,18 @@ app.get("/todos", (request, response) => {
 
 
 app.post("/todos", (request, response) => {
-  {
-  }
+         console.log("todo Added", request.body)
+         response.json({
+             status: 'success'
+         })
 });
 
-app.delete("/todos/id", (request, response) => {
-  {
-  }
+app.delete("/todos/:id", (request, response) => {
+      const {id} = request.params
+      console.log(id)
 });
 
-// Connect to db
 
-// mongoose.connect(process.env.DB_CONNECTION, () => {
-//     console.log('contected to db')
-// })
 
 // listening to the server
 app.listen(port);
