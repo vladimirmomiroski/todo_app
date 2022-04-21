@@ -6,11 +6,11 @@ import BodyItemActions from "./BodyItemActions";
 export default function TodoBodyItem({ item }) {
   const { li } = classes;
 
-  const { id } = item;
+  const { _id } = item;
   return (
     <li className={li}>
       <BodyItemCheckbox item={item} />
-      <BodyItemActions id={id} />
+      <BodyItemActions id={_id} />
     </li>
   );
 }

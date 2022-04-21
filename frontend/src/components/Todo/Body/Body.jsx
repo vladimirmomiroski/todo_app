@@ -11,8 +11,8 @@ export default function Body() {
   return (
     <div className={container}>
       <ul className={ul}>
-        {todoData.map((item) => (
-          <BodyItem key={item.id} item={item} />
+        {todoData.map(item => (
+          <BodyItem key={item._id} item={item} />
         ))}
       </ul>
     </div>
