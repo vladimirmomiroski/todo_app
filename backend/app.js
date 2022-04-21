@@ -20,7 +20,6 @@ app.get("/todos", (request, response) => {
   Todo.find().then((data) => response.json(data));
 });
 
-// working in progress
 app.post("/todos", (request, response) => {
   const todo = request.body;
   console.log(todo.name);
@@ -34,15 +33,11 @@ app.post("/todos", (request, response) => {
     .save()
     .then((data) => {
       response.json(data);
-      response.setHeader('Content-Type', 'text/plain');
     })
     .catch((error) => {
       console.log(error);
     });
 
-  response.json({
-    status: "success",
-  });
 });
 
 app.delete("/todos/:id", async (request, response) => {
@@ -51,15 +46,10 @@ app.delete("/todos/:id", async (request, response) => {
   try {
     const removedTodo = await Todo.deleteOne({ _id: id });
     response.json(removedTodo);
-    response.setHeader('Content-Type', 'text/plain');
   } catch (error) {
     response.json({ message: error });
   }
 
-
-  response.json({
-    status: "success",
-  });
 });
 
 app.patch("/todos/:id", async (request, response) => {
@@ -71,17 +61,12 @@ app.patch("/todos/:id", async (request, response) => {
       { $set: { isCompleted: true} }
     );
     response.json(updatedTodo);
-    response.setHeader('Content-Type', 'text/plain');
   } catch (error) {
     response.json({ message: error });
   }
-
-
-  response.json({
-    status: "success",
-  });
 });
 
+// db connection
 mongoose
   .connect(process.env.DB_CONNECTION_URL, {
     useNewUrlParser: true,
