@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import {fetchData, fetchPost, sendMethodToServer} from '../../FetchMethodsHandler/FetchMethodsHandler'
+import {fetchData, fetchPost, sendMethodToServer} from './FetchMethodsHandler/FetchMethodsHandler'
 export const Context = createContext();
 
 

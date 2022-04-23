@@ -1,4 +1,4 @@
-const urlToFetch = "http://localhost:5000/todos"
+const urlToFetch = process.env.REACT_APP_TODOS_URL
 
 export const fetchData = (setData) => {
     fetch(`${urlToFetch}`)
@@ -7,7 +7,6 @@ export const fetchData = (setData) => {
         setData(dataFromServer);
       })
       .catch((error) => {
-        console.log("jgofwj")
         console.log(error);
       });
   };
