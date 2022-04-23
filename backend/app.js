@@ -1,9 +1,9 @@
-const express = require("express");
 const { mongoose } = require("mongoose");
+const express = require("express");
 const cors = require("cors");
-const port = 5000;
 const Todo = require("./models/Todos");
 require("dotenv/config");
+const PORT = process.env.PORT
 
 const app = express();
 app.use(express.json());
@@ -13,12 +13,14 @@ app.use(cors());
 
 // routes
 app.get("/", (request, response) => {
-  response.send(todoArr);
+  response.send("Home Route");
 });
 
 app.get("/todos", (request, response) => {
   Todo.find().then((data) => response.json(data));
 });
+
+// 
 
 app.post("/todos", (request, response) => {
   const todo = request.body;
@@ -76,4 +78,4 @@ mongoose
   .catch((err) => console.log(err));
 
 // listening to the server
-app.listen(port);
+app.listen(PORT);
