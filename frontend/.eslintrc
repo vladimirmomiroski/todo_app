@@ -10,12 +10,14 @@
 	],
 	"parserOptions":
 	{
+
 		"sourceType": "module",
 		"ecmaFeatures": {
             "jsx": true
         },
 		"ecmaVersion": 2018
 	},
+	
 
 	"rules": {
         "jsdoc/require-jsdoc": "off",
