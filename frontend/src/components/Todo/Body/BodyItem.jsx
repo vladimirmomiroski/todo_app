@@ -1,4 +1,6 @@
 import classes from './BodyItem.module.css';
+import BodyItemCheckbox from './BodyItemCheckbox';
+import BodyItemActions from './BodyItemActions';
 
 export default function TodoBodyItem({ item }) 
 {

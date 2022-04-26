@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-stylelint": "^15.0.0"
+    "eslint-config-stylelint": "^15.0.0",
+    "prettier": "^2.6.2"
   }
 }
