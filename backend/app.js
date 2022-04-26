@@ -20,7 +20,6 @@ app.get("/todos", (request, response) => {
   Todo.find().then((data) => response.json(data));
 });
 
-// 
 
 app.post("/todos", (request, response) => {
   const todo = request.body;
@@ -56,7 +55,6 @@ app.delete("/todos/:id", async (request, response) => {
 
 app.patch("/todos/:id", async (request, response) => {
   const { id } = request.params;
-  console.log(id);
   try {
     const updatedTodo = await Todo.updateOne(
       { _id: id },

@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@isnotdefined/eslint-config": "^4.7.0",
+    "@isnotdefined/stylelint-config": "^3.2.0",
     "config": "3.3.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
