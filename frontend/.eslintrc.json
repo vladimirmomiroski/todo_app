@@ -17,8 +17,9 @@
         },
 		"ecmaVersion": 2018
 	},
+
 	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "jsdoc/require-jsdoc": "off"
 	}
 	
 }

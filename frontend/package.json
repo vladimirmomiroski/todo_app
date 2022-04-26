@@ -19,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/** && stylelint src/**/**",
-    "fix": "eslint src/**/** --fix && stylelint src/**/** --fix"
+    "lint": "eslint src && stylelint src",
+    "fix": "eslint src --fix && stylelint src --fix"
   },
   "browserslist": {
     "production": [
