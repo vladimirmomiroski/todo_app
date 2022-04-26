@@ -1,5 +1,4 @@
 {
-	
 	"env":
 	{
 		"es6": true,
@@ -18,7 +17,9 @@
 		"ecmaVersion": 2018
 	},
 	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+		"jsdoc/require-param-type": "off",
+		"jsdoc/require-description": "off",
+		"jsdoc/jsdoc/require-description": "off",
+		"jsdoc/require-returns": "off"
 	}
-	
 }
