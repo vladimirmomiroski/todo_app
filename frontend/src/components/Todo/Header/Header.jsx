@@ -2,9 +2,6 @@ import { useContext, useState } from 'react';
 import classes from './Header.module.css';
 import { Context } from '../Context';
 
-/**
- *
- */
 export default function TodoHeader() 
 {
 	const { container, input, btn } = classes;

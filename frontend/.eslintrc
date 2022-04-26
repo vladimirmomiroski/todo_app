@@ -1,5 +1,4 @@
 {
-	
 	"env":
 	{
 		"es6": true,
@@ -19,7 +18,10 @@
 	},
 
 	"rules": {
-        "jsdoc/require-jsdoc": "off"
+        "jsdoc/require-jsdoc": "off",
+		"jsdoc/require-param-type": "off",
+		"jsdoc/require-description": "off",
+		"jsdoc/jsdoc/require-description": "off",
+		"jsdoc/require-returns": "off"
 	}
-	
 }

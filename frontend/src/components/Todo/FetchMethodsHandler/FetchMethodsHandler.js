@@ -10,7 +10,7 @@ export const fetchData = setData =>
       })
       .catch(error => 
       {
-        console.log(error);
+      	throw new Error(error);
       });
 };
 
@@ -24,12 +24,17 @@ export const fetchPost = (item, setTodoData) =>
       body: JSON.stringify(item)
     };
 
-    fetch(urlToFetch, options).then(res => 
+    fetch(urlToFetch, options)
+    .then(res => 
     {
     	if (res.status === 200) 
     	{
     		fetchData(setTodoData);
     	}
+    })
+    .catch(error => 
+    {
+    	throw new Error(error);
     });
 };
 
@@ -52,6 +57,6 @@ export const sendMethodToServer = (method, id, setTodoData) =>
       })
       .catch(error => 
       {
-        console.log(error);
+      	throw new Error(error);
       });
 };

@@ -1,17 +1,21 @@
-.container {
-    display:flex;
-    align-items: center;
+.container
+ {
+	align-items: center;
+	display: flex;
 }
 
-.nameText {
-    margin-left:0.6rem;
+.nameText
+ {
+	margin-left: 0.6rem;
 }
 
-.checkmark {
-    height: 18px;
-    width: 18px;
+.checkmark
+ {
+	height: 1.1rem;
+	width: 1.1rem;
 }
 
-.checked {
-    text-decoration: line-through;
+.checked
+ {
+	text-decoration: line-through;
 }
