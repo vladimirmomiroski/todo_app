@@ -1,12 +1,12 @@
-import React from "react";
-import classes from "./Main.module.css";
-import MainContainer from "./MainContainer/MainContainer";
+import classes from './Main.module.css';
 
-export default function TodoMain() {
-  const { container } = classes;
-  return (
-    <div className={container}>
-      <MainContainer />
-    </div>
-  );
+export default function TodoMain() 
+{
+	const { container } = classes;
+
+	return (
+		<div className={container}>
+			<MainContainer />
+		</div>
+	);
 }

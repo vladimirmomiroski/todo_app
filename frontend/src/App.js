@@ -1,13 +1,12 @@
-import "./App.css";
-import React from "react";
-import TodoMain from "./components/Todo/Main";
+import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <TodoMain />
-    </div>
-  );
+function App() 
+{
+	return (
+		<div className="App">
+			<TodoMain />
+		</div>
+	);
 }
 
 export default App;
