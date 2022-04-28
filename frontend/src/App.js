@@ -1,4 +1,3 @@
-import './App.css';
 import TodoMain from './Todo/Main';
 
 function App() 
