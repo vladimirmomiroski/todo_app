@@ -1,7 +1,6 @@
 const { mongoose } = require('mongoose');
 const express = require('express');
 const cors = require('cors');
-const Todo = require('../server/models/Todos');
 
 const app = express();
 
@@ -11,76 +10,10 @@ app.use(express.json());
 app.use(cors());
 
 // routes
-app.get('/', (request, response) => 
-{
-  response.send('Home Route');
-});
 
-app.get('/todos', (request, response) => 
-{
-  Todo.find()
-    .then(data => response.json(data))
-    .catch(error => 
-    {
-    	throw new Error(error);
-    });
-});
-
-app.post('/todos', (request, response) => 
-{
-	const todo = request.body;
-
-	const post = new Todo({
-    name: todo.name,
-    isCompleted: todo.isCompleted
-  });
-
-  post
-    .save()
-    .then(data => 
-    {
-      response.json(data);
-    })
-    .catch(error => 
-    {
-    	throw new Error(error);
-    });
-});
-
-app.delete('/todos/:id', async(request, response) => 
-{
-	const { id } = request.params;
-
-	try 
-	{
-		const removedTodo = await Todo.deleteOne({ _id: id });
-
-    response.json(removedTodo);
-	}
-	catch (error) 
-	{
-    response.json({ message: error });
-	}
-});
-
-app.patch('/todos/:id', async(request, response) => 
-{
-	const { id } = request.params;
-
-	try 
-	{
-		const updatedTodo = await Todo.updateOne(
-      { _id: id },
-      { $set: { isCompleted: true } }
-		);
-
-    response.json(updatedTodo);
-	}
-	catch (error) 
-	{
-    response.json({ message: error });
-	}
-});
+app.use('/', require('./Routes/routes'));
+app.use('/todos', require('./Routes/routes'));
+app.use('/todos/:id', require('./Routes/routes'));
 
 // db connection
 mongoose
