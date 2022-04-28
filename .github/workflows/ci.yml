@@ -14,5 +14,5 @@ jobs:
      node-version: 14
   -   run: npm install --prefix ./backend
   -   run: npm install --prefix ./frontend
-  -   run: npm run lint --prefix ./backend/server
+  -   run: npm run lint --prefix ./backend
   -   run: npm run lint --prefix ./frontend
