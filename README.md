@@ -13,10 +13,10 @@ https://github.com/vladimirmomiroski/todo_app.git
 Install the dependencies: 
 
 ```
- npm install --prefix ./backend
+npm install --prefix ./backend
 ```
 ```
- npm install --prefix ./frontend
+npm install --prefix ./frontend
 ```
 
 ## Setup
