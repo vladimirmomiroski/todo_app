@@ -4,8 +4,8 @@
   "main": "App.js",
   "scripts": {
     "start": "nodeman app.js",
-    "lint": "eslint server",
-    "fix": "eslint server --fix"
+    "lint": "eslint src",
+    "fix": "eslint src --fix"
   },
   "keywords": [],
   "author": "",
