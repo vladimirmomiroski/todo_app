@@ -1,27 +1,27 @@
 {
 	"name": "todo_app",
-	"version": "1.0.0",
+	"author": "Vladimir Momiroski",
 	"description": "Todo Application",
+	"homepage": "https://github.com/vladimirmomiroski/todo_app#readme",
+	"version": "1.0.0",
 	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepare": "husky install"
+	"license": "ISC",
+	"dependencies": {
+		"husky": "^7.0.4"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/vladimirmomiroski/todo_app.git"
 	},
-	"author": "",
-	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/vladimirmomiroski/todo_app/issues"
 	},
-	"homepage": "https://github.com/vladimirmomiroski/todo_app#readme",
 	"workspaces": [
 		"frontend",
 		"backend"
 	],
-	"dependencies": {
-		"husky": "^7.0.4"
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky install"
 	}
 }
