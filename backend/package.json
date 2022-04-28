@@ -20,7 +20,8 @@
   },
   "description": "",
   "devDependencies": {
-    "prettier": "^2.6.2",
-    "@isnotdefined/eslint-config": "^4.8.0"
+    "@isnotdefined/eslint-config": "^4.8.0",
+    "eslint": "^8.14.0",
+    "prettier": "^2.6.2"
   }
 }
