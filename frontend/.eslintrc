@@ -1,10 +1,12 @@
 {
-	"env": {
+	"env": 
+	{
 		"es6": true,
 		"node": true
 	},
 	"extends": ["@isnotdefined/eslint-config", "react-app", "react-app/jest"],
-	"parserOptions": {
+	"parserOptions": 
+	{
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
@@ -12,7 +14,8 @@
 		"ecmaVersion": 2018
 	},
 
-	"rules": {
+	"rules": 
+	{
 		"jsdoc/require-jsdoc": "off",
 		"jsdoc/require-param-type": "off",
 		"jsdoc/require-description": "off",
