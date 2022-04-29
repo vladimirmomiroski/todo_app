@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000",
-  "dependencies": {
+  "dependencies": 
+  {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -14,7 +15,8 @@
     "todo_app": "file:..",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
+  "devDependencies": 
+  {
     "@isnotdefined/eslint-config": "^4.8.0",
     "@isnotdefined/stylelint-config": "^3.2.0",
     "eslint": "^8.14.0",
@@ -23,7 +25,8 @@
     "prettier": "^2.6.2",
     "stylelint": "^14.8.0"
   },
-  "scripts": {
+  "scripts": 
+  {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -31,13 +34,16 @@
     "lint": "eslint src && stylelint src",
     "fix": "eslint src --fix && stylelint src --fix"
   },
-  "browserslist": {
-    "production": [
+  "browserslist": 
+  {
+    "production": 
+    [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-    "development": [
+    "development": 
+    [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
