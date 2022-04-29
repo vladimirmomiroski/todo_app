@@ -1,15 +1,18 @@
 {
-  "env": {
+  "env": 
+  {
     "es6": true,
     "node": true
   },
   "extends": ["@isnotdefined/eslint-config"],
-  "parserOptions": {
+  "parserOptions": 
+  {
     "sourceType": "module",
     "ecmaVersion": 2018
   },
 
-  "rules": {
+  "rules": 
+  {
     "jsdoc/require-jsdoc": "off",
     "jsdoc/require-param-type": "off",
     "jsdoc/require-description": "off",
