@@ -9,7 +9,7 @@ export default function TodoBodyItemCheckbox({ item })
 
 	const { checkTodoAsCompleted } = useContext(Context);
 
-	const checkCompleted = isCompleted ? checked : '';
+	const checkCompleted = isCompleted ? checked : null;
 
 	return (
 		<div className={container}>

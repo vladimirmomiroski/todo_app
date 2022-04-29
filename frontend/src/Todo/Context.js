@@ -19,12 +19,12 @@ export const Provider = ({ children }) =>
 	const deleteTodo = id => 
 	{
 		const confirming = window.confirm(
-      'Are you sure you want to delete this todo'
+        'Are you sure you want to delete this todo'
 		);
 
 		if (confirming) 
 		{
-			sendMethodToServer('DELETE', id, setTodoData);
+		 sendMethodToServer('DELETE', id, setTodoData);
 		}
 	};
 
@@ -33,12 +33,13 @@ export const Provider = ({ children }) =>
 		sendMethodToServer('PATCH', id, setTodoData);
 	};
 
-	const contextObj = {
-    todoData,
-    addTodo,
-    deleteTodo,
-    checkTodoAsCompleted
-  };
+	const contextObj = 
+	{
+    	todoData,
+    	addTodo,
+    	deleteTodo,
+    	checkTodoAsCompleted
+    };
 
 	return <Context.Provider value={contextObj}>{children}</Context.Provider>;
 };

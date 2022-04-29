@@ -12,19 +12,19 @@ export default function TodoHeader()
 
 	const onSubmitHandler = e => 
 	{
-    e.preventDefault();
-    if (todoName) 
-    {
-    	const id = new Date().valueOf();
-    	const todoItem = {
-        id,
+   		e.preventDefault();
+
+    	if (todoName) 
+    	{
+    	const todoItem = 
+		{
         isCompleted: false,
         name: todoName
-      };
+        };
 
     	addTodo(todoItem);
     	setTodoName('');
-    }
+   		}
 	};
 
 	return (

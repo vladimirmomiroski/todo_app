@@ -11,7 +11,7 @@ export default function TodoBodyItemActions({ id })
 	return (
 		<div>
 			<button onClick={() => deleteTodo(id)} className={deleteBtn}>
-        Delete
+            Delete
 			</button>
 		</div>
 	);
