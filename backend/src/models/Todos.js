@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
-const TodoSchema = mongoose.Schema({
-  name: {
+const TodoSchema = mongoose.Schema(
+{
+  name: 
+  {
     type: String,
     required: true
   },
-  isCompleted: {
+  isCompleted: 
+  {
     type: Boolean,
     required: true
   }
