@@ -1,20 +1,19 @@
 const Todo = require('../Models/Todos');
 
-exports.updateTodoHandler = async(request, response) => 
+exports.updateTodoHandler = (request, response) => 
 {
 	const { id } = request.params;
 
-	try 
-	{
-		const updatedTodo = await Todo.updateOne(
+	Todo.updateOne(
       { _id: id },
       { $set: { isCompleted: true } }
-		);
-
-    response.json(updatedTodo);
-	}
-	catch (error) 
-	{
-    response.json({ message: error });
-	}
+	  ) 
+	  .then(data => 
+	  {
+		response.json(data);
+	  })
+	  .catch(error => 
+	  {
+	  	throw new Error(error);
+	  });
 };

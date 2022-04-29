@@ -1,17 +1,16 @@
 const Todo = require('../Models/Todos');
 
-exports.deleteTodoHandler = async(request, response) => 
+exports.deleteTodoHandler = (request, response) => 
 {
 	const { id } = request.params;
-
-	try 
-	{
-		const removedTodo = await Todo.deleteOne({ _id: id });
-
-    response.json(removedTodo);
-	}
-	catch (error) 
-	{
-    response.json({ message: error });
-	}
+	
+	Todo.deleteOne({ _id: id })
+    .then(data => 
+    {
+        response.json(data);
+    })
+    .catch(error => 
+    {
+    	throw new Error(error);
+    });
 };
