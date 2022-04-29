@@ -6,22 +6,27 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "ISC",
-	"repository": {
+	"repository": 
+	{
 		"type": "git",
 		"url": "git+https://github.com/vladimirmomiroski/todo_app.git"
 	},
-	"bugs": {
+	"bugs": 
+	{
 		"url": "https://github.com/vladimirmomiroski/todo_app/issues"
 	},
-	"workspaces": [
+	"workspaces": 
+	[
 		"frontend",
 		"backend"
 	],
-	"scripts": {
+	"scripts": 
+	{
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"prepare": "husky install"
 	},
-	"devDependencies": {
+	"devDependencies": 
+	{
 		"husky": "^7.0.4"
 	}
 }
