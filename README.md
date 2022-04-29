@@ -27,6 +27,12 @@ Create a .env.local file inside frontend directory:
 REACT_APP_TODOS_URL=http://localhost:5000/todos
 ```
 
+Create a .env file inside backend directory:
+
+```
+DB_URL=mongodb+srv://user:password@hostname
+```
+
 ## Usage
 
 Start the application with `local` environment:
