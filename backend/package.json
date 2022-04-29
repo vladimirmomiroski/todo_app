@@ -2,7 +2,8 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "App.js",
-  "dependencies": {
+  "dependencies": 
+  {
     "config": "3.3.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -10,12 +11,14 @@
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {
+  "devDependencies": 
+  {
     "@isnotdefined/eslint-config": "^4.8.0",
     "eslint": "^8.14.0",
     "prettier": "^2.6.2"
   },
-  "scripts": {
+  "scripts": 
+  {
     "start": "nodeman app.js",
     "lint": "eslint src",
     "fix": "eslint src --fix"
