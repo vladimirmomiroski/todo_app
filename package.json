@@ -6,6 +6,11 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "ISC",
+	"devDependencies": 
+	{
+		"husky": "^7.0.4",
+		"pre-commit": "^1.2.2"
+	},
 	"repository": 
 	{
 		"type": "git",
@@ -23,10 +28,7 @@
 	"scripts": 
 	{
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepare": "husky install"
-	},
-	"devDependencies": 
-	{
-		"husky": "^7.0.4"
+		"install-precommit": "cp ../tools/pre-commit.sh ../.git/hooks/pre-commit"
 	}
+
 }
