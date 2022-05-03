@@ -21,13 +21,13 @@ npm install --prefix ./frontend
 
 ## Setup
 
-Create a .env.local file inside frontend directory:
+Create a `.env.local` file inside frontend directory:
 
 ```
 REACT_APP_TODOS_URL=http://localhost:5000/todos
 ```
 
-Create a .env file inside backend directory:
+Create a `.env` file inside backend directory:
 
 ```
 DB_URL=mongodb+srv://user:password@hostname
@@ -56,10 +56,5 @@ Browse your backend api on:
 ```
 http://localhost:5000/todos
 ```
-
-
-
-
-
 
 

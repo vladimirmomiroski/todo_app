@@ -33,20 +33,5 @@
     "eject": "react-scripts eject",
     "lint": "eslint src && stylelint src",
     "fix": "eslint src --fix && stylelint src --fix"
-  },
-  "browserslist": 
-  {
-    "production": 
-    [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": 
-    [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

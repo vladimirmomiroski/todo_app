@@ -5,16 +5,13 @@ import { Context } from '../Context';
 export default function TodoHeader() 
 {
 	const { container, input, btn } = classes;
-
 	const { addTodo } = useContext(Context);
-
 	const [ todoName, setTodoName ] = useState('');
 
 	const onSubmitHandler = e => 
 	{
    		e.preventDefault();
-
-    	if (todoName) 
+        	if (todoName) 
     	{
     	const todoItem = 
 		{

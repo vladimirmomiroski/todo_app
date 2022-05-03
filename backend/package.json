@@ -6,7 +6,6 @@
   {
     "config": "3.3.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15"
@@ -15,7 +14,8 @@
   {
     "@isnotdefined/eslint-config": "^4.8.0",
     "eslint": "^8.14.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "dotenv": "^16.0.0"
   },
   "scripts": 
   {

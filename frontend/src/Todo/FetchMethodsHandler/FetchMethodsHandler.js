@@ -1,8 +1,8 @@
-const urlToFetch = process.env.REACT_APP_TODOS_URL;
+const url = process.env.REACT_APP_TODOS_URL;
 
 export const fetchData = setData => 
 {
-    fetch(`${urlToFetch}`)
+    fetch(url)
     .then(res => res.json())
     .then(dataFromServer => 
     {
@@ -26,7 +26,7 @@ export const fetchPost = (item, setTodoData) =>
       body: JSON.stringify(item)
     };
 
-    fetch(urlToFetch, options)
+    fetch(url, options)
     .then(res => 
     {
     	if (res.status === 200) 
@@ -51,7 +51,7 @@ export const sendMethodToServer = (method, id, setTodoData) =>
       }
     };
 
-      fetch(`${urlToFetch}/${id}`, options)
+      fetch(`${url}/${id}`, options)
       .then(res => 
       {
       	if (res.status === 200) 
