@@ -4,7 +4,7 @@
 	display: flex;
 }
 
-.nameText
+.name-text
 {
 	margin-left: 0.6rem;
 }
@@ -13,9 +13,4 @@
 {
 	height: 1.2rem;
 	width: 1.2rem;
-}
-
-.checked
-{
-	text-decoration: line-through;
 }

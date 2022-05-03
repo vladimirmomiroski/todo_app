@@ -1,10 +1,9 @@
 import { useContext, useState } from 'react';
-import classes from './Header.module.css';
+import styles from './Header.module.css';
 import { Context } from '../Context';
 
 export default function TodoHeader() 
 {
-	const { container, input, btn } = classes;
 	const { addTodo } = useContext(Context);
 	const [ todoName, setTodoName ] = useState('');
 
@@ -25,15 +24,15 @@ export default function TodoHeader()
 	};
 
 	return (
-		<form onSubmit={onSubmitHandler} className={container}>
+		<form onSubmit={onSubmitHandler} className={styles['container']}>
 			<input
 				value={todoName}
 				onChange={e => setTodoName(e.target.value)}
-				className={input}
+				className={styles['input']}
 				type="text"
 				placeholder="New Todo"
 			/>
-			<button className={btn}>Add ToDo</button>
+			<button className={styles['button']}>Add ToDo</button>
 		</form>
 	);
 }
