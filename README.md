@@ -21,11 +21,12 @@ npm install --prefix ./frontend
 
 ## Setup
 
-Create a .env.local file inside frontend directory:
+
 
 ```
 REACT_APP_TODOS_URL=http://localhost:5000/todos
 ```
+
 
 ## Usage
 
@@ -49,4 +50,3 @@ Browse your backend api on:
 
 ```
 http://localhost:5000/todos
-```

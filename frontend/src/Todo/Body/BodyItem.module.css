@@ -1,0 +1,13 @@
+.li-item
+{
+	align-items: center;
+	background-color: #fff;
+	border-left: 0.8rem solid #00203f;
+	border-radius: 0.2rem;
+	display: flex;
+	font-weight: 700;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0.2rem 0;
+	padding: 1.2rem 1.7rem 1.2rem 1.2rem;
+}
