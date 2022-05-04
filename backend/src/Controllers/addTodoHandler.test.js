@@ -1,4 +1,4 @@
 test('Adding todo', () => 
 {
-   expect(true).toBeTruthy();
+   expect(false).toBeTruthy();
 });
