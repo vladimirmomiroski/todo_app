@@ -1,2 +1,4 @@
 npm run lint --prefix ./backend
 npm run lint --prefix ./frontend
+
+npm test
